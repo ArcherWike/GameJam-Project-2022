@@ -1,6 +1,5 @@
 extends "res://Crafter.gd"
 
-
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"s
@@ -13,6 +12,7 @@ func get_item():
 	return "pierogi"
 
 func _ready():
+	popupScene = preload("res://Menu/Menu.tscn").instance()
 	recipies={
 		"pierogi": {
 			"conditions":[

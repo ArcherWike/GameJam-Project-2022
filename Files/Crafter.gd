@@ -1,5 +1,6 @@
 extends Node
 var popupScene
+var item
 
 func evaluateConditions(array):
 	for i in array:
@@ -8,11 +9,14 @@ func evaluateConditions(array):
 
 var inventory = []
 var temperature = 0
-var recipies = {
-	"pierogi":{}
-}
+var recipies = {}
 
+func open():
+	add_child(popupScene)
 
+func putItem(from,item):
+	from.remove(item)
+	inventory.append(item)
 
 func craft():
 	for key in recipies:
