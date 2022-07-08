@@ -11,7 +11,7 @@ func _ready():
 			if obj2.name[0] == "S":
 				print(obj2.name)
 				obj2.connect("gui_input", self, "slot_input", [obj2])
-	#for object in fridge_slot.get_children():
+	#  for object in fridge_slot.get_children():
 		#if object.name[0] == "S":
 			#object.connect("gui_input", self, "slot_input", [object])
 		
