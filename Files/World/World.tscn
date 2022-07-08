@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/Object/Container.gd" type="Script" id=2]
+[ext_resource path="res://World/Object.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/furniture/Fridge.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 59.625, 58.625 )
@@ -13,10 +16,10 @@ extents = Vector2( 37, 32 )
 [node name="YSort" type="YSort" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="YSort"]
-margin_left = -2.0
-margin_top = -18.0
-margin_right = 545.0
-margin_bottom = 314.0
+margin_left = -21.0
+margin_top = -9.0
+margin_right = 1307.0
+margin_bottom = 729.0
 color = Color( 1, 1, 1, 0.596078 )
 
 [node name="Player" parent="YSort" instance=ExtResource( 1 )]
@@ -27,7 +30,13 @@ position = Vector2( -2, -18 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="YSort/Walls"]
 position = Vector2( 2, 18 )
-polygon = PoolVector2Array( 31, 292, 505, 296, 507, 186, 484, 186, 484, 96, 508, 93, 511, 3, 132, 2, 38, 2, 42, 175, 4, 175, 3, 336, -95, 295, -93, -45, 691, -12, 725, 389, 14, 340, -95, 294 )
+polygon = PoolVector2Array( 8, 696, 880, 685, 882, 11, 511, 3, 132, 2, 38, 2, 42, 175, -2, 174, -35, 739, -95, 295, -94, -47, 1464, -44, 1316, 732, -12, 742, -93, 382, -95, 294 )
+
+[node name="Fridge" parent="YSort" instance=ExtResource( 4 )]
+margin_left = 916.0
+margin_top = 62.0
+margin_right = 916.0
+margin_bottom = 62.0
 
 [node name="Furnace" type="Area2D" parent="."]
 
@@ -47,3 +56,9 @@ color = Color( 0.192157, 0.188235, 0.188235, 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Furnace/StaticBody2D"]
 position = Vector2( -3, 233 )
 shape = SubResource( 2 )
+
+[node name="Container" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Object" parent="Container" instance=ExtResource( 3 )]
+position = Vector2( 334, 323 )
