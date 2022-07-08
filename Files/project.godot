@@ -16,6 +16,7 @@ config/icon="res://icon.png"
 [autoload]
 
 DishManager="*res://DishManager.gd"
+Inventory="*res://Singletony/Inventory.gd"
 
 [display]
 

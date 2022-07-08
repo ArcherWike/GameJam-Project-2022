@@ -1,5 +1,6 @@
 extends Node2D
 
+var item_name
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -9,6 +10,14 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if randi() % 2 == 0:
-		$TextureRect.texture = load("res://World/Item/apple.png")
+		item_name = "apple"
 	else:
-		$TextureRect.texture = load("res://World/Item/carrot.png")
+		item_name = "carrot"
+		
+		
+	$TextureRect.texture = load("res://World/Item/" + item_name + ".png")
+
+
+func setItem(name):
+	item_name = name
+	$TextureRect.texture = load("res://World/Item/" + item_name + ".png")

@@ -1,5 +1,7 @@
 extends Panel
 
+
+
 var ItemClass = preload("res://World/furniture/Slot/Item.tscn")
 var item = null
 
@@ -25,4 +27,10 @@ func putIntoSlot(new_item):
 	add_child(item)
 	
 	
-	
+func create(item_name):
+	if item == null:
+		item = ItemClass.instance()
+		add_child(item)
+		item.setItem(item_name)
+	else:
+		item.setItem(item_name)

@@ -11,6 +11,11 @@ func _ready():
 			if obj2.name[0] == "S":
 				print(obj2.name)
 				obj2.connect("gui_input", self, "slot_input", [obj2])
+	var slots = fridge_slot.get_children()
+	
+	for i in fridge_slot.get_children():
+		if Inventory.inventory.has(i):
+			slots[i].create(Inventory.inventory[i][0])			
 	#  for object in fridge_slot.get_children():
 		#if object.name[0] == "S":
 			#object.connect("gui_input", self, "slot_input", [object])
@@ -19,6 +24,7 @@ func _ready():
 func slot_input(event: InputEvent, slot: Slot):
 	if event is InputEventMouseButton:
 		if event.button_index == BUTTON_LEFT && event.pressed:
+			print(slot)
 			if holding_item != null:
 				if !slot.item:
 					slot.putIntoSlot(holding_item)
