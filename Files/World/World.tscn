@@ -1,8 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://World/Object/Container.gd" type="Script" id=2]
-[ext_resource path="res://World/Object.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/furniture/Fridge.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -33,10 +31,10 @@ position = Vector2( 2, 18 )
 polygon = PoolVector2Array( 8, 696, 880, 685, 882, 11, 511, 3, 132, 2, 38, 2, 42, 175, -2, 174, -35, 739, -95, 295, -94, -47, 1464, -44, 1316, 732, -12, 742, -93, 382, -95, 294 )
 
 [node name="Fridge" parent="YSort" instance=ExtResource( 4 )]
-margin_left = 916.0
-margin_top = 62.0
-margin_right = 916.0
-margin_bottom = 62.0
+margin_left = 933.0
+margin_top = 83.0
+margin_right = 933.0
+margin_bottom = 83.0
 
 [node name="Furnace" type="Area2D" parent="."]
 
@@ -56,9 +54,3 @@ color = Color( 0.192157, 0.188235, 0.188235, 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Furnace/StaticBody2D"]
 position = Vector2( -3, 233 )
 shape = SubResource( 2 )
-
-[node name="Container" type="Node" parent="."]
-script = ExtResource( 2 )
-
-[node name="Object" parent="Container" instance=ExtResource( 3 )]
-position = Vector2( 334, 323 )
