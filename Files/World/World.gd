@@ -6,7 +6,7 @@ var open = 0 #false/ 1-open/ close
 func _ready():
 	$Fridge/Background.hide()
 	$Fridge/szafka.hide()
-	$Fridge/miska.hide()
+	#$Fridge/miska.hide()
 
 func close():
 	$Fridge/Background.hide()
