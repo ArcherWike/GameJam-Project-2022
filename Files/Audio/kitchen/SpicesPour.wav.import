@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SpicesPour.wav-90ec8fe53604f0e937a75dbf50d8080c.sample"
+
+[deps]
+
+source_file="res://Audio/kitchen/SpicesPour.wav"
+dest_files=[ "res://.import/SpicesPour.wav-90ec8fe53604f0e937a75dbf50d8080c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

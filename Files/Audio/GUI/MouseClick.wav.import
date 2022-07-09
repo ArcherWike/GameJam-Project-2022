@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MouseClick.wav-8319fc23d17c93e966727834cfed7233.sample"
+
+[deps]
+
+source_file="res://Audio/GUI/MouseClick.wav"
+dest_files=[ "res://.import/MouseClick.wav-8319fc23d17c93e966727834cfed7233.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

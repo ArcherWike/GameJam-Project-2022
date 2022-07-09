@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/OvenClose.wav-7bda02f06657cf91e300a2f3b06db21b.sample"
+
+[deps]
+
+source_file="res://Audio/kitchen/OvenClose.wav"
+dest_files=[ "res://.import/OvenClose.wav-7bda02f06657cf91e300a2f3b06db21b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

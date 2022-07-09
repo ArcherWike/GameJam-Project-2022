@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FootstepsTile3.wav-ffb5d7dc60e52b70c6b35e5e9f02df10.sample"
+
+[deps]
+
+source_file="res://Audio/kitchen/FootstepsTile3.wav"
+dest_files=[ "res://.import/FootstepsTile3.wav-ffb5d7dc60e52b70c6b35e5e9f02df10.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

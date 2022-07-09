@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Unpasue.wav-11ba4fe7ae01fd34d8b8d8cca96b2c86.sample"
+
+[deps]
+
+source_file="res://Audio/GUI/Unpasue.wav"
+dest_files=[ "res://.import/Unpasue.wav-11ba4fe7ae01fd34d8b8d8cca96b2c86.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

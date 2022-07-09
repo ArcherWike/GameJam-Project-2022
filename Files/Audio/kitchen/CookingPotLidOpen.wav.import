@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/CookingPotLidOpen.wav-fe64bc4fb8b8d9084232b22bb0b59cfc.sample"
+
+[deps]
+
+source_file="res://Audio/kitchen/CookingPotLidOpen.wav"
+dest_files=[ "res://.import/CookingPotLidOpen.wav-fe64bc4fb8b8d9084232b22bb0b59cfc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

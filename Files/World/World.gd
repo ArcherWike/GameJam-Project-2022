@@ -3,6 +3,7 @@ extends Node2D
 
 var open = 0 #false/ 1-open/ close
 
+#onready var Menu = preload("res://Menu/Menu.tscn").instance()
 
 
 func chowaj():
@@ -15,10 +16,13 @@ func chowaj():
 	$Fridge/Smazenie.hide()
 	
 
+			
 
 func _ready():
 	$Background.hide()
 	chowaj()
+	#Music.play("muzyka_gamePlay")
+	#add_child(Menu)
 
 func close():
 	$Obiekty.show()
