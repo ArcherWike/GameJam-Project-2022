@@ -5,8 +5,8 @@ const Item = preload("res://World/Item/Item.gd")
 const spaceAmount = 24
 
 var inventory = {
-	0 : ["apple"],
-	1 : ["carrot"]
+	0 : ["cebula"],
+	1 : ["szklanka"]
 }
 
 func add_item(item_name):

@@ -3,19 +3,25 @@ extends Node2D
 
 var open = 0 #false/ 1-open/ close
 
+
+
+func chowaj():
+	$Fridge/blat.hide()
+	$Fridge/miska.hide()
+	$Fridge/szuflada.hide()
+	$Fridge/piekarnik.hide()
+	$Fridge/kran.hide()	
+	
+
+
 func _ready():
 	$Background.hide()
-	$Fridge/szafka.hide()
-	$Fridge/miska.hide()
-	$Fridge/Piekarnik.hide()
-	$Obiekty.show()
+	chowaj()
 
 func close():
-	$Background.hide()
-	$Fridge/szafka.hide()
-	$Fridge/miska.hide()
 	$Obiekty.show()
-	$Fridge/Piekarnik.hide()
+	chowaj()
+	#$Fridge/Piekarnik.hide()
 	open = 0
 
 
@@ -67,6 +73,18 @@ func _on_B_miska_miska():
 
 func _on_Piekarnik_piekarnik():
 	$Background.show()
-	$Fridge/Piekarnik.show()
+	#$Fridge/Piekarnik.show()
 	$Obiekty.hide()
 	open += 1
+
+func Hide_all():
+	$Obiekty.hide()
+
+
+
+func _on_mebelCollision_obiekt(mebel):
+	var obiekt = get_node("Fridge/"+ mebel)
+	obiekt.show()
+	open += 1
+	print(mebel, obiekt.show())
+

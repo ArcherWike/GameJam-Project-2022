@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://World/furniture/Slot/Slot.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/furniture/Slot/item_slot_default.png" type="Texture" id=2]
+[ext_resource path="res://World/furniture/miska.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 18, 18 )
+
+[node name="miska" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -8.0
+margin_right = 8.0
+margin_bottom = -8.0
+script = ExtResource( 4 )
+
+[node name="Slot25" parent="." instance=ExtResource( 1 )]
+margin_left = 240.0
+margin_top = 191.0
+margin_right = 310.0
+margin_bottom = 261.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Slot24" parent="." instance=ExtResource( 1 )]
+margin_left = 467.0
+margin_top = 191.0
+margin_right = 537.0
+margin_bottom = 261.0
+rect_scale = Vector2( 2, 2 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 347.0
+margin_top = 455.0
+margin_right = 497.0
+margin_bottom = 555.0
+rect_min_size = Vector2( 150, 100 )
+text = "Mix"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

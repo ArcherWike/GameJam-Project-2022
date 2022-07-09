@@ -6,7 +6,7 @@ const Slot = preload("res://World/furniture/Slot/Slot.gd")
 
 var holding_item = null
 
-var Blat_item = "carrot"
+var Blat_item = "cebula"
 	
 	
 onready var skladnik_roboczy = get_node("Slot24")

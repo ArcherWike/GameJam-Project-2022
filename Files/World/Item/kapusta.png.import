@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/apple.png-8e24c00ca7e8896b85a2c3ddcbdca919.stex"
+path="res://.import/kapusta.png-94f1911cb5d93097f3e897e9f2ae0750.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Item/apple.png"
-dest_files=[ "res://.import/apple.png-8e24c00ca7e8896b85a2c3ddcbdca919.stex" ]
+source_file="res://World/Item/kapusta.png"
+dest_files=[ "res://.import/kapusta.png-94f1911cb5d93097f3e897e9f2ae0750.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

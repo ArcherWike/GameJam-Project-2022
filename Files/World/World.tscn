@@ -1,24 +1,19 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/World.gd" type="Script" id=2]
-[ext_resource path="res://World/furniture/szafka.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/furniture/obiekty/kran.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/furniture/Fridge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://World/furniture/szuflada.tscn" type="PackedScene" id=5]
-[ext_resource path="res://World/furniture/B_miska.tscn" type="PackedScene" id=6]
-[ext_resource path="res://World/furniture/miska.tscn" type="PackedScene" id=7]
+[ext_resource path="res://World/furniture/obiekty/piekarnik.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/furniture/W_Blat.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/furniture/obiekty/podloga.png" type="Texture" id=9]
 [ext_resource path="res://World/furniture/obiekty/szafka1.png" type="Texture" id=10]
 [ext_resource path="res://World/furniture/obiekty/piekarnik1.png" type="Texture" id=11]
 [ext_resource path="res://World/furniture/obiekty/palnik.png" type="Texture" id=12]
-[ext_resource path="res://World/furniture/Blat/obierz.tscn" type="PackedScene" id=13]
+[ext_resource path="res://World/furniture/obiekty/mebelCollision.tscn" type="PackedScene" id=13]
 [ext_resource path="res://World/furniture/Open_fridge.gd" type="Script" id=14]
-[ext_resource path="res://Menu/Button.tscn" type="PackedScene" id=15]
-[ext_resource path="res://World/furniture/Blat/ubij.tscn" type="PackedScene" id=16]
-[ext_resource path="res://World/furniture/Blat/cut.tscn" type="PackedScene" id=17]
-[ext_resource path="res://World/furniture/Slot/Slot.tscn" type="PackedScene" id=18]
-[ext_resource path="res://World/furniture/Piekarnik/Piekarnik.gd" type="Script" id=19]
+[ext_resource path="res://World/furniture/obiekty/miska.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 335, 333.694, 0, 333.694, 0, 0, 335, 0 )
@@ -100,25 +95,6 @@ points = PoolVector2Array( 341.051, 341, 0, 341, 0, 0, 341.051, 0 )
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="TileSet" id=6]
-0/name = "palnik.png 0"
-0/texture = ExtResource( 12 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 114, 124, 173, 149 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 47.4063, 48.3438 )
-
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 193.25, 282.5 )
 
@@ -127,20 +103,21 @@ script = ExtResource( 2 )
 
 [node name="YSort" type="YSort" parent="."]
 
-[node name="B_szafka" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 499, 150 )
-rotation = 1.5708
+[node name="mebelCollision" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 401, 149 )
+mebel = "piekarnik"
 
-[node name="B_szafka2" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 299, 154 )
-rotation = 1.5708
+[node name="mebelCollision3" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 502, 143 )
+mebel = "kran"
 
-[node name="B_szafka3" parent="YSort" instance=ExtResource( 3 )]
-position = Vector2( 199, 154 )
-rotation = 1.5708
+[node name="mebelCollision4" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 297, 150 )
+mebel = "blat"
 
-[node name="B_miska" parent="YSort" instance=ExtResource( 6 )]
-position = Vector2( 513, 154 )
+[node name="mebelCollision5" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 192, 150 )
+mebel = "szuflada"
 
 [node name="Obiekty" type="Node2D" parent="."]
 
@@ -165,7 +142,7 @@ format = 1
 tile_data = PoolIntArray( -131074, 0, 0, -196601, 0, 0, 196606, 0, 0, 131079, 0, 0 )
 
 [node name="Player" parent="Obiekty" instance=ExtResource( 1 )]
-position = Vector2( 349, 225 )
+position = Vector2( 364, 307 )
 
 [node name="Background" type="ColorRect" parent="."]
 visible = false
@@ -185,131 +162,42 @@ margin_top = 83.0
 margin_right = 1283.0
 margin_bottom = 633.0
 
-[node name="szafka" parent="Fridge" instance=ExtResource( 5 )]
+[node name="blat" parent="Fridge" instance=ExtResource( 8 )]
 visible = false
 margin_left = -933.0
 margin_top = -83.0
 margin_right = -933.0
 margin_bottom = -83.0
 
-[node name="miska" parent="Fridge" instance=ExtResource( 7 )]
+[node name="miska" parent="Fridge" instance=ExtResource( 16 )]
 visible = false
-margin_left = -973.0
-margin_top = -76.0
-margin_right = -973.0
-margin_bottom = -76.0
+margin_left = -918.0
+margin_top = -25.0
+margin_right = -918.0
+margin_bottom = -25.0
 
-[node name="W_Blat" parent="Fridge" instance=ExtResource( 8 )]
+[node name="piekarnik" parent="Fridge" instance=ExtResource( 7 )]
 visible = false
-margin_left = -933.0
-margin_top = -83.0
-margin_right = -933.0
-margin_bottom = -83.0
+margin_left = -847.0
+margin_top = -28.0
+margin_right = -847.0
+margin_bottom = -28.0
 
-[node name="Piekarnik" type="Control" parent="Fridge"]
+[node name="szuflada" parent="Fridge" instance=ExtResource( 5 )]
 visible = false
-anchor_left = 0.088
-anchor_top = 0.074
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -867.8
-margin_top = -61.7
-margin_right = -449.0
-margin_bottom = 59.0
-script = ExtResource( 19 )
+anchor_right = 0.911
+anchor_bottom = 0.964
+margin_left = -953.0
+margin_top = -82.0
+margin_right = -1271.85
+margin_bottom = -62.2
 
-[node name="TextureRect" type="TextureRect" parent="Fridge/Piekarnik"]
-margin_right = 1240.0
-margin_bottom = 1600.0
-rect_scale = Vector2( 1.83498, 1.72255 )
-texture = ExtResource( 11 )
-
-[node name="TileMap" type="TileMap" parent="Fridge/Piekarnik/TextureRect"]
-scale = Vector2( 0.5, 0.35 )
-tile_set = SubResource( 6 )
-cell_size = Vector2( 32, 32 )
-cell_quadrant_size = 10
-cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
-format = 1
-tile_data = PoolIntArray( 327684, 0, 0, 327694, 0, 0, 655364, 0, 0, 655374, 0, 0 )
-
-[node name="Button" parent="Fridge/Piekarnik" instance=ExtResource( 15 )]
-margin_left = 370.0
-margin_top = 283.0
-margin_right = 670.0
-margin_bottom = 333.0
-text = "Craftuj"
-
-[node name="Button2" parent="Fridge/Piekarnik" instance=ExtResource( 15 )]
-margin_left = 65.0
-margin_top = 288.0
-margin_right = 365.0
-margin_bottom = 338.0
-text = "Podgrzej"
-
-[node name="Area2D" type="Area2D" parent="Fridge/Piekarnik"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fridge/Piekarnik/Area2D"]
-position = Vector2( 323.188, 143.313 )
-shape = SubResource( 7 )
-
-[node name="Slot24" parent="Fridge/Piekarnik" instance=ExtResource( 18 )]
-modulate = Color( 0, 0, 0, 0.419608 )
-margin_left = 298.0
-margin_top = 473.0
-margin_right = 368.0
-margin_bottom = 543.0
-rect_scale = Vector2( 2, 1 )
-
-[node name="W_Blat2" type="Control" parent="Fridge/Piekarnik"]
+[node name="kran" parent="Fridge" instance=ExtResource( 3 )]
 visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -96.0
-margin_top = -62.0
-margin_right = -96.0
-margin_bottom = -62.0
-
-[node name="ColorRect" type="ColorRect" parent="Fridge/Piekarnik/W_Blat2"]
-margin_right = 958.0
-margin_bottom = 718.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Fridge/Piekarnik/W_Blat2"]
-margin_left = 29.0
-margin_top = 301.0
-margin_right = 269.0
-margin_bottom = 618.0
-custom_constants/separation = 14
-
-[node name="cut" parent="Fridge/Piekarnik/W_Blat2/VBoxContainer" instance=ExtResource( 17 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 240.0
-margin_bottom = 80.0
-
-[node name="obierz" parent="Fridge/Piekarnik/W_Blat2/VBoxContainer" instance=ExtResource( 13 )]
-margin_top = 94.0
-margin_bottom = 174.0
-
-[node name="ubij" parent="Fridge/Piekarnik/W_Blat2/VBoxContainer" instance=ExtResource( 16 )]
-margin_left = 0.0
-margin_top = 188.0
-margin_right = 240.0
-margin_bottom = 268.0
-
-[node name="Slot24" parent="Fridge/Piekarnik/W_Blat2" instance=ExtResource( 18 )]
-margin_left = 477.0
-margin_top = 336.0
-margin_right = 547.0
-margin_bottom = 406.0
-rect_scale = Vector2( 3, 3 )
-
-[node name="Slot25" parent="Fridge/Piekarnik/W_Blat2" instance=ExtResource( 18 )]
-margin_left = 83.0
-margin_top = 44.0
-margin_right = 153.0
-margin_bottom = 114.0
-rect_scale = Vector2( 2, 2 )
+margin_left = -897.0
+margin_top = -67.0
+margin_right = -897.0
+margin_bottom = -67.0
 
 [node name="FridgeDoor2" type="Node2D" parent="."]
 position = Vector2( 944, 105 )
@@ -322,18 +210,11 @@ position = Vector2( 153.75, 252.5 )
 shape = SubResource( 5 )
 
 [node name="FridgeDoor" type="ColorRect" parent="FridgeDoor2"]
-visible = false
 margin_right = 335.0
 margin_bottom = 511.0
 color = Color( 0.435294, 0.435294, 0.435294, 0.756863 )
 
-[connection signal="szafka" from="YSort/B_szafka" to="." method="_on_B_szafka_szafka"]
-[connection signal="szafka" from="YSort/B_szafka2" to="." method="_on_B_szafka_szafka"]
-[connection signal="szafka" from="YSort/B_szafka3" to="." method="_on_B_szafka_szafka"]
-[connection signal="miska" from="YSort/B_miska" to="." method="_on_B_miska_miska"]
-[connection signal="piekarnik" from="Fridge/Piekarnik" to="." method="_on_Piekarnik_piekarnik"]
-[connection signal="body_entered" from="Fridge/Piekarnik/Area2D" to="Fridge/Piekarnik" method="_on_Area2D_body_entered"]
-[connection signal="body_exited" from="Fridge/Piekarnik/Area2D" to="Fridge/Piekarnik" method="_on_Area2D_body_exited"]
-[connection signal="pressed" from="Fridge/Piekarnik/W_Blat2/VBoxContainer/cut" to="Fridge/Piekarnik/W_Blat2" method="_on_cut_pressed"]
-[connection signal="pressed" from="Fridge/Piekarnik/W_Blat2/VBoxContainer/obierz" to="Fridge/Piekarnik/W_Blat2" method="_on_obierz_pressed"]
-[connection signal="pressed" from="Fridge/Piekarnik/W_Blat2/VBoxContainer/ubij" to="Fridge/Piekarnik/W_Blat2" method="_on_ubij_pressed"]
+[connection signal="obiekt" from="YSort/mebelCollision" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="obiekt" from="YSort/mebelCollision3" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="obiekt" from="YSort/mebelCollision4" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="obiekt" from="YSort/mebelCollision5" to="." method="_on_mebelCollision_obiekt"]
