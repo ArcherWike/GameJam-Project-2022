@@ -42,3 +42,7 @@ func _on_obierz_pressed():
 
 func _on_ubij_pressed():
 	pass # Replace with function body.
+
+
+func krojenie():
+	print("pociachane")

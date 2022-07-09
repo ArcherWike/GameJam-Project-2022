@@ -18,19 +18,43 @@ margin_bottom = -8.0
 script = ExtResource( 4 )
 
 [node name="Slot25" parent="." instance=ExtResource( 1 )]
-margin_left = 240.0
-margin_top = 191.0
-margin_right = 310.0
-margin_bottom = 261.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 555.0
+margin_top = 289.0
+margin_right = 625.0
+margin_bottom = 359.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Slot26" parent="." instance=ExtResource( 1 )]
+margin_left = 394.0
+margin_top = 249.0
+margin_right = 464.0
+margin_bottom = 319.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Slot27" parent="." instance=ExtResource( 1 )]
+margin_left = 228.0
+margin_top = 299.0
+margin_right = 298.0
+margin_bottom = 369.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/panel = SubResource( 1 )
+
+[node name="Slot28" parent="." instance=ExtResource( 1 )]
+margin_left = 145.0
+margin_top = 433.0
+margin_right = 215.0
+margin_bottom = 503.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_styles/panel = SubResource( 1 )
 
 [node name="Slot24" parent="." instance=ExtResource( 1 )]
-margin_left = 467.0
-margin_top = 191.0
-margin_right = 537.0
-margin_bottom = 261.0
-rect_scale = Vector2( 2, 2 )
+margin_left = 646.0
+margin_top = 425.0
+margin_right = 716.0
+margin_bottom = 495.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_styles/panel = SubResource( 1 )
 
 [node name="Button" type="Button" parent="."]

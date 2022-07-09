@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/garnek1.png-f1e0fe378cdb07b4bc5d99d9b51d6202.stex"
+path="res://.import/lodowka_front.png-fc1e2bcfa1ab7e384933773937483a6e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/furniture/obiekty/garnek1.png"
-dest_files=[ "res://.import/garnek1.png-f1e0fe378cdb07b4bc5d99d9b51d6202.stex" ]
+source_file="res://World/furniture/obiekty/lodowka_front.png"
+dest_files=[ "res://.import/lodowka_front.png-fc1e2bcfa1ab7e384933773937483a6e.stex" ]
 
 [params]
 

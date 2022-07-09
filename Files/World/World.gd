@@ -11,6 +11,8 @@ func chowaj():
 	$Fridge/szuflada.hide()
 	$Fridge/piekarnik.hide()
 	$Fridge/kran.hide()	
+	$Fridge/Przelewanie.hide()
+	$Fridge/Smazenie.hide()
 	
 
 

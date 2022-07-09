@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/garnek2.png-4078c50b7284b3df6cbfac0b49ba8c69.stex"
+path="res://.import/garnek2.png-816d0021836bc5393248bf4a2508ad63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/furniture/obiekty/garnek2.png"
-dest_files=[ "res://.import/garnek2.png-4078c50b7284b3df6cbfac0b49ba8c69.stex" ]
+source_file="res://World/Item/garnek2.png"
+dest_files=[ "res://.import/garnek2.png-816d0021836bc5393248bf4a2508ad63.stex" ]
 
 [params]
 

@@ -10,16 +10,17 @@ func _on_Button_pressed():
 			regex.compile("^(Item)\\d*$")
 			if regex.search(item_child.name):
 				skladniki.append(item_child.item_name)
-	if len(skladniki) == 2:
-		DishManager.wykonano["mix"] = [skladniki]
-		print(DishManager.wykonano)
-		skladniki.clear()
-		for child in get_children():
-			var regex = RegEx.new()
-			regex.compile("^(Slot)\\d*$")
-			if regex.search(child.name):
-				child.delFromSlot()
-				#item_child.queue_free()
+				print(skladniki)
+	#if len(skladniki) == 2:
+		#DishManager.wykonano["mix"] = [skladniki]
+		#print(DishManager.wykonano)
+		#skladniki.clear()
+		#for child in get_children():
+			#var regex = RegEx.new()
+		#	regex.compile("^(Slot)\\d*$")
+		#	if regex.search(child.name):
+			#	child.delFromSlot()
+			#	#item_child.queue_free()
 	
 
 #func _ready():
