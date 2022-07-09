@@ -6,8 +6,16 @@ var ItemClass = preload("res://World/furniture/Slot/Item.tscn")
 var item = null
 
 
+#func _ready():
+#	if get_children():
+#		for child in get_children():
+#			create(child.item_name)
+#			print("ta")
+		#create(self.get_child().item_name)
 
-	
+func delFromSlot():
+	remove_child(item)
+	item = null	
 		
 func pickFromSlot():
 	remove_child(item)
@@ -22,6 +30,7 @@ func putIntoSlot(new_item):
 	var inventoryNode = find_parent("Fridge")
 	inventoryNode.remove_child(item)
 	add_child(item)
+	print(item.item_name)
 	
 	
 	
