@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World/furniture/Blat/cut.tscn" type="PackedScene" id=1]
+
+[node name="ubij" instance=ExtResource( 1 )]
+margin_right = 299.0
+margin_bottom = 412.0
+text = "ubij"

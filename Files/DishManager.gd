@@ -6,7 +6,8 @@ var drawingPath = "PotrawyDrawings/example.png"
 
 var przepis = {
 	"marchewka" : ["umyć"],
-	"mix": ["carrot", "apple"]
+	"mix": ["carrot", "apple"],
+	"cut": []
 }
 
 

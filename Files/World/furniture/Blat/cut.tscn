@@ -1,0 +1,9 @@
+[gd_scene format=2]
+
+[node name="cut" type="Button"]
+margin_left = 59.0
+margin_top = 332.0
+margin_right = 290.0
+margin_bottom = 405.0
+rect_min_size = Vector2( 240, 80 )
+text = "pokrój"

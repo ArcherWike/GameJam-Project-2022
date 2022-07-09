@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://World/furniture/Blat/obierz.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World/furniture/Blat/cut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/furniture/Blat/ubij.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World/furniture/Slot/Slot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World/furniture/Blat/W_Blat.gd" type="Script" id=5]
+
+[node name="W_Blat" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 958.0
+margin_bottom = 718.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 29.0
+margin_top = 301.0
+margin_right = 269.0
+margin_bottom = 618.0
+custom_constants/separation = 14
+
+[node name="cut" parent="VBoxContainer" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 240.0
+margin_bottom = 80.0
+
+[node name="obierz" parent="VBoxContainer" instance=ExtResource( 1 )]
+margin_top = 94.0
+margin_bottom = 174.0
+
+[node name="ubij" parent="VBoxContainer" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 188.0
+margin_right = 240.0
+margin_bottom = 268.0
+
+[node name="Slot24" parent="." instance=ExtResource( 4 )]
+margin_left = 477.0
+margin_top = 336.0
+margin_right = 547.0
+margin_bottom = 406.0
+rect_scale = Vector2( 3, 3 )
+
+[node name="Slot25" parent="." instance=ExtResource( 4 )]
+margin_left = 83.0
+margin_top = 44.0
+margin_right = 153.0
+margin_bottom = 114.0
+rect_scale = Vector2( 2, 2 )
+
+[connection signal="pressed" from="VBoxContainer/cut" to="." method="_on_cut_pressed"]
+[connection signal="pressed" from="VBoxContainer/obierz" to="." method="_on_obierz_pressed"]
+[connection signal="pressed" from="VBoxContainer/ubij" to="." method="_on_ubij_pressed"]
