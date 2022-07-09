@@ -65,6 +65,7 @@ margin_right = -973.0
 margin_bottom = -76.0
 
 [node name="W_Blat" parent="Fridge" instance=ExtResource( 8 )]
+visible = false
 margin_left = -933.0
 margin_top = -83.0
 margin_right = -933.0

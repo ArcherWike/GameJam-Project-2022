@@ -4,6 +4,8 @@ var MAX_SPEED = 300
 var FRICTION = 350
 
 var velocity = Vector2.ZERO 
+func _ready():
+	$AnimationPlayer.play("go_up")
 
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO 
