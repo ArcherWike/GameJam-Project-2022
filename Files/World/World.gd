@@ -12,3 +12,7 @@ func _on_Furnace_body_entered(body):
 	Inventory.add_item("carrot")
 	print(Inventory.inventory)
 	
+
+
+func _on_Furnace2_body_entered(body):
+	$Fridge.load_items()

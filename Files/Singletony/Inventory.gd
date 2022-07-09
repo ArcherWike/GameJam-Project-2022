@@ -12,5 +12,5 @@ func add_item(item_name):
 	for z in range(spaceAmount):
 		if inventory.has(z) == false:
 			print(z)
-			inventory[z] = item_name
+			inventory[z] = [item_name]
 			return

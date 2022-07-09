@@ -30,6 +30,9 @@ polygon = PoolVector2Array( 8, 696, 880, 685, 882, 11, 511, 3, 132, 2, 38, 2, 42
 
 [node name="Furnace" parent="." instance=ExtResource( 3 )]
 
+[node name="Furnace2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 153 )
+
 [node name="Background" type="ColorRect" parent="."]
 visible = false
 margin_right = 875.0
@@ -50,3 +53,4 @@ margin_right = -933.0
 margin_bottom = -83.0
 
 [connection signal="body_entered" from="Furnace" to="." method="_on_Furnace_body_entered"]
+[connection signal="body_entered" from="Furnace2" to="." method="_on_Furnace2_body_entered"]

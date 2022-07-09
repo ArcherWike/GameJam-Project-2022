@@ -5,17 +5,17 @@ onready var fridge_slot = $GridContainer
 
 var holding_item = null
 
+
+	
 func _ready():
 	for obj in get_children():
 		for obj2 in obj.get_children():
 			if obj2.name[0] == "S":
 				print(obj2.name)
 				obj2.connect("gui_input", self, "slot_input", [obj2])
-	var slots = fridge_slot.get_children()
+	load_items()
 	
-	for i in fridge_slot.get_children():
-		if Inventory.inventory.has(i):
-			slots[i].create(Inventory.inventory[i][0])			
+		
 	#  for object in fridge_slot.get_children():
 		#if object.name[0] == "S":
 			#object.connect("gui_input", self, "slot_input", [object])
@@ -44,3 +44,9 @@ func _input(_event):
 	if holding_item:
 		holding_item.global_position = get_global_mouse_position()
 				
+
+func load_items():	
+	var slots = fridge_slot.get_children()
+	for i in range(slots.size()):
+		if Inventory.inventory.has(i):
+			slots[i].create(Inventory.inventory[i][0])		
