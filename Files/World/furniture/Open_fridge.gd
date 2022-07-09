@@ -20,9 +20,11 @@ func _input(event):
 		if IsOpen:
 			IsOpen = false
 			$FridgeDoor.hide()
+			$OpenDoor.show()
 		else:
 			IsOpen = true
 			$FridgeDoor.show()
+			$OpenDoor.hide()
 
 #func _on_Area2D_mouse_entered():
 	#print("DSA")

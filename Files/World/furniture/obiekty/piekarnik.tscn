@@ -55,6 +55,7 @@ custom_fonts/font = SubResource( 1 )
 text = "temp: 0"
 
 [node name="Timer" type="Timer" parent="Node2D"]
+wait_time = 0.2
 
 [node name="Slot24" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.52549, 0.454902, 0.509804, 0.921569 )

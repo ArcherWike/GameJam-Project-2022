@@ -37,4 +37,10 @@ margin_right = 253.0
 margin_bottom = 258.0
 rect_scale = Vector2( 3, 2 )
 
+[node name="Slot1" parent="." instance=ExtResource( 2 )]
+margin_left = 576.0
+margin_top = 104.0
+margin_right = 636.0
+margin_bottom = 164.0
+
 [connection signal="pressed" from="Node2D/Button" to="." method="_on_Button_pressed"]

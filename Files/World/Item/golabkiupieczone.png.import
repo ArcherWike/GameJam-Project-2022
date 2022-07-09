@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/item_slot_empty.png-def9641df758788ce5f1c23125a69b87.stex"
+path="res://.import/golabkiupieczone.png-8ad2c5becb08593d8734f611ee892de3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/furniture/Slot/item_slot_empty.png"
-dest_files=[ "res://.import/item_slot_empty.png-def9641df758788ce5f1c23125a69b87.stex" ]
+source_file="res://World/Item/golabkiupieczone.png"
+dest_files=[ "res://.import/golabkiupieczone.png-8ad2c5becb08593d8734f611ee892de3.stex" ]
 
 [params]
 

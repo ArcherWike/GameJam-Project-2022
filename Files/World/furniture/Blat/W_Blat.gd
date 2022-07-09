@@ -13,10 +13,11 @@ onready var skladnik_roboczy = get_node("Slot24")
 
 	
 func _ready():
-	for obj in get_children():
-		if obj.name == "Slot25":
+	pass
+	#for obj in get_children():
+		#if obj.name == "Slot25":
 			#obj.connect("gui_input", self, "slot_input", [obj])
-			obj.create(Blat_item)
+			#obj.create(Blat_item)
 	
 		
 	#  for object in fridge_slot.get_children():
@@ -45,4 +46,7 @@ func _on_ubij_pressed():
 
 
 func krojenie():
-	print("pociachane")
+	if skladnik_roboczy.get_child_count():
+		for item_child in skladnik_roboczy.get_children():
+			if item_child.item_name == "cebula1":
+				skladnik_roboczy.create("cebulka_pokrojona")

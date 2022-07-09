@@ -12,3 +12,8 @@ func _on_Button_pressed():
 			if item_child.item_name == "woda":
 				object.create("szklanka")
 				$Slot25.create("garnek2")
+
+
+func _process(delta):
+	$Slot1.create("szklanka")
+		#var i = ran

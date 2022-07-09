@@ -12,3 +12,5 @@ margin_left = 536.0
 margin_top = 189.0
 margin_right = 549.0
 margin_bottom = 350.0
+
+[node name="Sprite" type="Sprite" parent="."]

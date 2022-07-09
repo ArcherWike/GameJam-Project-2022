@@ -16,8 +16,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-DishManager="*res://DishManager.gd"
+DishManager="*res://Singletony/DishManager.gd"
 Inventory="*res://Singletony/Inventory.gd"
+GlobalTimer="*res://Singletony/Timer.gd"
 
 [display]
 

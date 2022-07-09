@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/World.gd" type="Script" id=2]
@@ -7,7 +7,7 @@
 [ext_resource path="res://World/furniture/szuflada.tscn" type="PackedScene" id=5]
 [ext_resource path="res://World/furniture/obiekty/lodowka_front.png" type="Texture" id=6]
 [ext_resource path="res://World/furniture/obiekty/piekarnik.tscn" type="PackedScene" id=7]
-[ext_resource path="res://World/furniture/W_Blat.tscn" type="PackedScene" id=8]
+[ext_resource path="res://World/furniture/obiekty/siekanie.tscn" type="PackedScene" id=8]
 [ext_resource path="res://World/furniture/obiekty/podloga.png" type="Texture" id=9]
 [ext_resource path="res://World/furniture/obiekty/szafka1.png" type="Texture" id=10]
 [ext_resource path="res://World/furniture/obiekty/piekarnik1.png" type="Texture" id=11]
@@ -21,12 +21,48 @@
 [ext_resource path="res://Audio/Music/GameplayMusic.wav" type="AudioStream" id=19]
 [ext_resource path="res://Audio/Music/MenuMusicLoop.wav" type="AudioStream" id=20]
 [ext_resource path="res://Menu/Menu.tscn" type="PackedScene" id=21]
+[ext_resource path="res://World/furniture/obiekty/lodowka-door.png" type="Texture" id=22]
+[ext_resource path="res://World/furniture/obiekty/szafkabez szuflad.png" type="Texture" id=23]
+[ext_resource path="res://World/furniture/obiekty/szafkaBokZakonczenie.png" type="Texture" id=24]
+[ext_resource path="res://World/furniture/obiekty/SzafkaBokŚrodek.png" type="Texture" id=25]
+[ext_resource path="res://World/furniture/obiekty/szafkadol.png" type="Texture" id=26]
+[ext_resource path="res://World/furniture/obiekty/szafkaTYŁ.png" type="Texture" id=27]
+[ext_resource path="res://World/furniture/obiekty/Gotowanie.tscn" type="PackedScene" id=28]
+[ext_resource path="res://World/furniture/obiekty/przekladanie.tscn" type="PackedScene" id=29]
+
+[sub_resource type="TileSet" id=9]
+0/name = "podloga.png 0"
+0/texture = ExtResource( 9 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -2, -3, 340, 340 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 335, 333.694, 0, 333.694, 0, 0, 335, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 341.051, 341, 0, 341, 0, 0, 341.051, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 313.944, 347, 0, 347, 0, 0.361115, 313.944, 0.361115 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 311, 367.639, 0, 367.639, 0, 0, 311, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 333.167, 272, 0, 272, 0, 0, 333.167, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+points = PoolVector2Array( 333.944, 311.472, 0.611115, 311.472, 0.611115, 0.361115, 333.944, 0.361115 )
 
 [sub_resource type="TileSet" id=1]
 0/name = "podloga.png 0"
@@ -85,6 +121,104 @@ points = PoolVector2Array( 341.051, 341, 0, 341, 0, 0, 341.051, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
+3/name = "szafkabez szuflad.png 3"
+3/texture = ExtResource( 23 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 134, 156, 336, 274 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "szafkaBokZakonczenie.png 4"
+4/texture = ExtResource( 24 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 83, 57, 316, 347 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 10 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+5/name = "SzafkaBokŚrodek.png 5"
+5/texture = ExtResource( 25 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 121, 55, 311, 369 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 11 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "szafkadol.png 6"
+6/texture = ExtResource( 26 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 136, 158, 338, 272 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape = SubResource( 12 )
+6/shape_one_way = false
+6/shape_one_way_margin = 1.0
+6/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+6/z_index = 0
+7/name = "szafkaTYŁ.png 7"
+7/texture = ExtResource( 27 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 38, 32, 336, 312 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 13 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 13 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
 
 [sub_resource type="TileSet" id=4]
 0/name = "palnik.png 0"
@@ -187,35 +321,54 @@ mebel = "kran"
 
 [node name="mebelCollision4" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 297, 150 )
-mebel = "blat"
+mebel = "siekanie"
 
 [node name="mebelCollision5" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 192, 150 )
 mebel = "szuflada"
+
+[node name="mebelCollision10" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 149, 309 )
+rotation = 0.0
+mebel = "szuflada2"
 
 [node name="mebelCollision6" parent="YSort" instance=ExtResource( 13 )]
 position = Vector2( 604, 147 )
 mebel = "Przelewanie"
 
 [node name="mebelCollision7" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 606, 455 )
+position = Vector2( 702, 151 )
 mebel = "Smazenie"
 
 [node name="mebelCollision8" parent="YSort" instance=ExtResource( 13 )]
-position = Vector2( 495, 462 )
+position = Vector2( 499, 455 )
 mebel = "miska"
+
+[node name="mebelCollision9" parent="YSort" instance=ExtResource( 13 )]
+position = Vector2( 810, 150 )
+mebel = "Gotowanie"
 
 [node name="Obiekty" type="Node2D" parent="."]
 
-[node name="TileMap" type="TileMap" parent="Obiekty"]
+[node name="podloga" type="TileMap" parent="Obiekty"]
 scale = Vector2( 0.3, 0.3 )
+z_index = -6
+tile_set = SubResource( 9 )
+cell_size = Vector2( 334, 334 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 334, 0, 0, 334, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0 )
+
+[node name="TileMap" type="TileMap" parent="Obiekty"]
+scale = Vector2( 0.3, 0.304 )
 z_index = -3
 tile_set = SubResource( 1 )
 cell_size = Vector2( 334, 334 )
 cell_quadrant_size = 10
 cell_custom_transform = Transform2D( 334, 0, 0, 334, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 65537, 1, 0, 65538, 1, 0, 65539, 2, 0, 65540, 1, 0, 65541, 1, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 1, 0, 262149, 2, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 2, 0 )
+tile_data = PoolIntArray( 65537, 1, 0, 65538, 1, 0, 65539, 2, 0, 65540, 1, 0, 65541, 1, 0, 65542, 2, 0, 65543, 2, 0, 196609, 5, 0, 262145, 5, 0, 327681, 7, 0, 327682, 7, 0, 327683, 7, 0, 327684, 7, 0, 327685, 7, 0 )
 
 [node name="rozne_obiekty" type="TileMap" parent="Obiekty"]
 position = Vector2( 322, 123 )
@@ -225,7 +378,7 @@ cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 10
 cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 6029356, 0, 0 )
+tile_data = PoolIntArray( -65471, 0, 0, -65449, 0, 0 )
 
 [node name="kran" type="Sprite" parent="Obiekty"]
 position = Vector2( 467, 136 )
@@ -254,12 +407,15 @@ margin_top = 83.0
 margin_right = 1283.0
 margin_bottom = 633.0
 
-[node name="blat" parent="Fridge" instance=ExtResource( 8 )]
+[node name="siekanie" parent="Fridge" instance=ExtResource( 8 )]
 visible = false
-margin_left = -933.0
-margin_top = -83.0
-margin_right = -933.0
-margin_bottom = -83.0
+margin_left = -1004.0
+margin_top = -68.0
+margin_right = -526.0
+margin_bottom = -68.0
+
+[node name="przekladanie" parent="Fridge" instance=ExtResource( 29 )]
+visible = false
 
 [node name="miska" parent="Fridge" instance=ExtResource( 16 )]
 visible = false
@@ -283,6 +439,17 @@ margin_left = -953.0
 margin_top = -82.0
 margin_right = -1271.85
 margin_bottom = -62.2
+item1 = "sol"
+
+[node name="szuflada2" parent="Fridge" instance=ExtResource( 5 )]
+visible = false
+anchor_right = 0.911
+anchor_bottom = 0.964
+margin_left = -953.0
+margin_top = -82.0
+margin_right = -1271.85
+margin_bottom = -62.2
+item1 = "szklanka"
 
 [node name="kran" parent="Fridge" instance=ExtResource( 3 )]
 visible = false
@@ -305,6 +472,9 @@ margin_top = -30.0
 margin_right = -872.0
 margin_bottom = -30.0
 
+[node name="Gotowanie" parent="Fridge" instance=ExtResource( 28 )]
+visible = false
+
 [node name="FridgeDoor2" type="Node2D" parent="."]
 position = Vector2( 944, 105 )
 script = ExtResource( 14 )
@@ -316,8 +486,14 @@ position = Vector2( 153.75, 252.5 )
 shape = SubResource( 5 )
 
 [node name="FridgeDoor" type="Sprite" parent="FridgeDoor2"]
-position = Vector2( 155, 261 )
+position = Vector2( 166, 240 )
 texture = ExtResource( 6 )
+
+[node name="OpenDoor" type="Sprite" parent="FridgeDoor2"]
+visible = false
+position = Vector2( -18, 248 )
+z_index = -5
+texture = ExtResource( 22 )
 
 [node name="Menu" parent="." instance=ExtResource( 21 )]
 
@@ -342,6 +518,8 @@ anims/muzyka_gamePlay = SubResource( 7 )
 [connection signal="obiekt" from="YSort/mebelCollision3" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision4" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision5" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="obiekt" from="YSort/mebelCollision10" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision6" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision7" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision8" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="obiekt" from="YSort/mebelCollision9" to="." method="_on_mebelCollision_obiekt"]

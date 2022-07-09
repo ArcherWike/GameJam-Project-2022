@@ -7,13 +7,16 @@ var open = 0 #false/ 1-open/ close
 
 
 func chowaj():
-	$Fridge/blat.hide()
+	$Fridge/siekanie.hide()
 	$Fridge/miska.hide()
 	$Fridge/szuflada.hide()
+	$Fridge/szuflada2.hide()
 	$Fridge/piekarnik.hide()
 	$Fridge/kran.hide()	
 	$Fridge/Przelewanie.hide()
 	$Fridge/Smazenie.hide()
+	$Fridge/Gotowanie.hide()
+	$Fridge/przekladanie.hide()
 	
 
 			
