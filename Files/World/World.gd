@@ -4,14 +4,18 @@ extends Node2D
 var open = 0 #false/ 1-open/ close
 
 func _ready():
-	$Fridge/Background.hide()
-	$Fridge/szafka.hide()
-	#$Fridge/miska.hide()
-
-func close():
-	$Fridge/Background.hide()
+	$Background.hide()
 	$Fridge/szafka.hide()
 	$Fridge/miska.hide()
+	$Fridge/Piekarnik.hide()
+	$Obiekty.show()
+
+func close():
+	$Background.hide()
+	$Fridge/szafka.hide()
+	$Fridge/miska.hide()
+	$Obiekty.show()
+	$Fridge/Piekarnik.hide()
 	open = 0
 
 
@@ -48,12 +52,21 @@ func _input(event):
 
 
 func _on_B_szafka_szafka():
-	$Fridge/Background.show()
+	$Background.show()
 	$Fridge/szafka.show()
+	$Obiekty.hide()
 	open += 1
 
 
 func _on_B_miska_miska():
 	$Background.show()
 	$Fridge/miska.show()
+	$Obiekty.hide()
+	open += 1
+
+
+func _on_Piekarnik_piekarnik():
+	$Background.show()
+	$Fridge/Piekarnik.show()
+	$Obiekty.hide()
 	open += 1

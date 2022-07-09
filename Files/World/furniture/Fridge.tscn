@@ -12,21 +12,17 @@ region_rect = Rect2( 0, 0, 18, 18 )
 [node name="Fridge" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 932.0
+margin_top = 76.0
+margin_right = 2.0
+margin_bottom = -94.0
+rect_min_size = Vector2( 350, 550 )
 script = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 350.0
 margin_bottom = 550.0
 rect_min_size = Vector2( 350, 550 )
-
-[node name="Slot25" type="Panel" parent="ColorRect"]
-margin_left = -157.0
-margin_top = 179.0
-margin_right = -87.0
-margin_bottom = 249.0
-rect_min_size = Vector2( 70, 70 )
-custom_styles/panel = SubResource( 1 )
-script = ExtResource( 2 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
 margin_left = 22.0
