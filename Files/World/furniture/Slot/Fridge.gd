@@ -27,18 +27,13 @@ func slot_input(event: InputEvent, slot: Slot):
 			print(slot)
 			if holding_item != null:
 				if !slot.item:
-					slot.putIntoSlot(holding_item)
-					holding_item = null
+					left_click(slot)
+					
 				else:
-					var temp_item = slot.item
-					slot.pickFromSlot()
-					temp_item.global_position = event.global_position
-					slot.putIntoSlot(holding_item)
-					holding_item = temp_item
+					if holding_item.item_name != slot.item.item_name:
+						left_click_different_items(event, slot)
 			elif slot.item:
-				holding_item = slot.item
-				slot.pickFromSlot()
-				holding_item.global_position = get_global_mouse_position()
+				left_click_not_holding(slot)
 
 func _input(_event):
 	if holding_item:
@@ -50,3 +45,24 @@ func load_items():
 	for i in range(slots.size()):
 		if Inventory.inventory.has(i):
 			slots[i].create(Inventory.inventory[i][0])		
+
+func left_click(slot: Slot):
+	Inventory.add_item_to_empty_slot(holding_item, slot)
+	slot.putIntoSlot(holding_item)
+	holding_item = null
+
+
+func left_click_different_items(event: InputEvent, slot: Slot):
+	Inventory.remove_item(slot)
+	Inventory.add_item_to_empty_slot(holding_item, slot)
+	var temp_item = slot.item
+	slot.pickFromSlot()
+	temp_item.global_position = event.global_position
+	slot.putIntoSlot(holding_item)
+	holding_item = temp_item
+
+func left_click_not_holding(slot: Slot):
+	Inventory.remove_item(slot)
+	holding_item = slot.item
+	slot.pickFromSlot()
+	holding_item.global_position = get_global_mouse_position()
