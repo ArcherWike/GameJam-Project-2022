@@ -57,6 +57,3 @@ func _on_Button_pressed():
 			#	child.delFromSlot()
 			#	#item_child.queue_free()
 	
-
-#func _ready():
-	#$Slot24.connect("gui_input", self, "slot_input", [$Slot24])

@@ -19,10 +19,12 @@ func _ready():
 
 
 	
-	
-func _process(_delta):
+
+		#var i = ran
+		
+
+
+func _on_Timer_timeout():
 	sloty[0].create(item1)
 	sloty[1].create(item2)
 	sloty[2].create(item3)
-		#var i = ran
-		

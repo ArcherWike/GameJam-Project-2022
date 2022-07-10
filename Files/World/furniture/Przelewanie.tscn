@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://World/furniture/obiekty/piekarnik1.png" type="Texture" id=1]
+[ext_resource path="res://World/furniture/obiekty/szafka1.png" type="Texture" id=1]
 [ext_resource path="res://World/furniture/Slot/Slot.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/furniture/Przelewanie.gd" type="Script" id=3]
 

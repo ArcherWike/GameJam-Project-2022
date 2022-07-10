@@ -20,12 +20,14 @@ script = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="Node2D"]
+[node name="Node2D2" type="Node2D" parent="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="Node2D/Node2D2"]
 position = Vector2( 443, 381 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
-[node name="Button" type="Button" parent="Node2D"]
+[node name="Button" type="Button" parent="Node2D/Node2D2"]
 margin_left = 365.0
 margin_top = 354.0
 margin_right = 515.0
@@ -68,4 +70,4 @@ margin_right = 321.0
 margin_bottom = 419.0
 custom_styles/panel = SubResource( 1 )
 
-[connection signal="pressed" from="Node2D/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Node2D/Node2D2/Button" to="." method="_on_Button_pressed"]

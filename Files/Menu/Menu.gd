@@ -14,6 +14,7 @@ func _physics_process(_delta):
 			Music.play("m_menu")
 		else:
 			self.hide()
+			get_tree().paused = false
 			Music.stop()
 			Music.set_current_animation("muzyka_gamePlay")	
 			Music.play("muzyka_gamePlay")

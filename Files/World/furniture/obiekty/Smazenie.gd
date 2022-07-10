@@ -53,3 +53,5 @@ func _on_CheckBox_pressed():
 	else:
 		process = false
 		$Node2D/Timer.stop()
+		time = 0
+		

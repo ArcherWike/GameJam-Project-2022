@@ -1,22 +1,5 @@
 extends Control
 
-
-
-func _ready():
-	$AnimationPlayer.play("menu_mjuzika")
-	$"VBoxContainer/NEW GAME".grab_focus()
-	$Input.hide()
-
-func _on_NEW_GAME_pressed():
-	goto_scene()
-	
-
-
-func _on_Exit_pressed():
-	get_tree().quit()
-	
-
-
 func goto_scene():
 	call_deferred("_deferred_goto_scene")
 	
@@ -41,4 +24,5 @@ func _deferred_goto_scene():
 	# Set it as the current scene, only after it has been added to the tree
 	get_tree().set_current_scene(instanced_scene)
 
-
+func _on_Button7_pressed():
+	goto_scene()
