@@ -4,6 +4,7 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+signal pieczenie (wloczony)
 
 var wloczony = false
 var temp = 0
@@ -23,10 +24,8 @@ func _physics_process(_delta):
 
 
 enum{
-	gora,
-	dol,
-	off,
-	all
+	on,
+	off
 }
 
 var state = off
@@ -36,42 +35,26 @@ func _ready():
 
 func _process(_delta):
 	match state:
-		gora:
-			$Node2D/turnPiekarnik/dol.hide()
-			$Node2D/turnPiekarnik/gora.show()
+		on:
+			$Node2D/Sprite.texture = load("res://World/furniture/obiekty/PiekarnikZapalony.png")
 			
-		dol:
-			$Node2D/turnPiekarnik/dol.show()
-			$Node2D/turnPiekarnik/gora.hide()
-
 		off:
-			$Node2D/turnPiekarnik/dol.hide()
-			$Node2D/turnPiekarnik/gora.hide()
+			$Node2D/Sprite.texture = load("res://World/furniture/obiekty/piekarnik1.png")
 
-		all:
-			$Node2D/turnPiekarnik/dol.show()
-			$Node2D/turnPiekarnik/gora.show()
 
 
 
 func _on_turnPiekarnik_pressed():
-	if state == gora:
-		state = dol
+	if state == off:
+		state = on
 		wloczony = true
 		nagrzej()
+		emit_signal("pieczenie", true)
 		
-	elif state == dol:
+	elif state == on:
 		state = off
 		wloczony = false
-	elif state == off:
-		state = all
-		wloczony = true
-		nagrzej()
-		
-	else:
-		state = gora
-		wloczony = true
-		nagrzej()
+		emit_signal("pieczenie", false)
 
 			
 		
@@ -79,7 +62,6 @@ onready var object = get_node("Slot24")
 
 func nagrzej():
 	$Node2D/Timer.start()
-	print("ss")
 				#object.create("woda")
 
 

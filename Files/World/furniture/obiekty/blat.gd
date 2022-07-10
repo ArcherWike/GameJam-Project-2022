@@ -5,9 +5,10 @@ export(String) var item2
 export(String) var item3
 
 
-var sloty = []
+var sloty = ["ryz", "ryz", "ryz"]
 
 func _ready():
+	sloty.clear()
 	for child in get_children():
 		var regex = RegEx.new()
 		regex.compile("^(Slot)\\d*$")
@@ -24,5 +25,4 @@ func _process(_delta):
 	sloty[1].create(item2)
 	sloty[2].create(item3)
 		#var i = ran
-		
 		

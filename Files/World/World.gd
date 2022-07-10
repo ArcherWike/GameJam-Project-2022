@@ -17,6 +17,8 @@ func chowaj():
 	$Fridge/Smazenie.hide()
 	$Fridge/Gotowanie.hide()
 	$Fridge/przekladanie.hide()
+	$Fridge/blat.hide()
+	$Fridge/blat2.hide()
 	
 
 			
@@ -92,6 +94,7 @@ func Hide_all():
 
 
 func _on_mebelCollision_obiekt(mebel):
+	#$Obiekty.hide()
 	var obiekt = get_node("Fridge/"+ mebel)
 	obiekt.show()
 	open += 1

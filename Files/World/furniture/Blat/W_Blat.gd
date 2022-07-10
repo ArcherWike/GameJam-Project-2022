@@ -29,20 +29,13 @@ var skladnik
 
 
 
-func _on_cut_pressed():
-	for child in $Slot24.get_children():
-		skladnik = child.item_name
-		DishManager.wykonano["cut"] = [skladnik]
-		skladnik = ""
-		$Slot24.delFromSlot()
-	print(DishManager.wykonano)
-		
-func _on_obierz_pressed():
-	pass # Replace with function body.
-
-
-func _on_ubij_pressed():
-	pass # Replace with function body.
+#func _on_cut_pressed():
+	#for child in $Slot24.get_children():
+	#	skladnik = child.item_name
+	#	DishManager.wykonano["cut"] = [skladnik]
+	#	skladnik = ""
+#		$Slot24.delFromSlot()
+#	print(DishManager.wykonano)
 
 
 func krojenie():

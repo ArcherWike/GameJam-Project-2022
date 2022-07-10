@@ -7,50 +7,43 @@
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 103.0
-margin_top = 3.0
-margin_right = 841.0
-margin_bottom = 655.0
+margin_left = 199.0
+margin_top = 144.0
+margin_right = 699.0
+margin_bottom = 594.0
 color = Color( 0.494118, 0.431373, 0.317647, 1 )
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 58.0
-margin_top = 630.0
-margin_right = 889.0
-margin_bottom = 690.0
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+margin_left = -48.0
+margin_top = 420.0
+margin_right = 540.0
+margin_bottom = 474.0
 color = Color( 0.192157, 0.184314, 0.164706, 1 )
 
 [node name="ColorRect3" type="ColorRect" parent="."]
-margin_left = 124.0
-margin_top = 28.0
-margin_right = 816.0
-margin_bottom = 617.0
+margin_left = 238.0
+margin_top = 164.0
+margin_right = 659.0
+margin_bottom = 541.0
 color = Color( 0.388235, 0.384314, 0.380392, 0.698039 )
 
 [node name="Slot24" parent="." instance=ExtResource( 1 )]
-margin_left = 258.0
-margin_top = 88.0
-margin_right = 328.0
-margin_bottom = 158.0
+margin_left = 252.0
+margin_top = 195.0
+margin_right = 322.0
+margin_bottom = 265.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="Slot25" parent="." instance=ExtResource( 1 )]
-margin_left = 565.0
-margin_top = 48.0
-margin_right = 635.0
-margin_bottom = 118.0
+margin_left = 449.0
+margin_top = 189.0
+margin_right = 519.0
+margin_bottom = 259.0
 rect_scale = Vector2( 2, 2 )
 
 [node name="Slot26" parent="." instance=ExtResource( 1 )]
-margin_left = 242.0
-margin_top = 369.0
-margin_right = 312.0
-margin_bottom = 439.0
-rect_scale = Vector2( 2, 2 )
-
-[node name="Slot27" parent="." instance=ExtResource( 1 )]
-margin_left = 542.0
-margin_top = 341.0
-margin_right = 612.0
-margin_bottom = 411.0
+margin_left = 372.0
+margin_top = 375.0
+margin_right = 442.0
+margin_bottom = 445.0
 rect_scale = Vector2( 2, 2 )

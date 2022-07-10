@@ -20,26 +20,25 @@ func _on_Button_pressed():
 				skladniki.append(item_child.item_name)
 				print(skladniki)
 				
-	if "cebula" and "sol" and "MiesoWieprzowe" and "bulka_tarta" and "pieprz" in skladniki:
+	if "cebulka złocistapokrojona" and "sol" and "MiesoWieprzowe" and "bulka_tarta" and "pieprz" in skladniki:
 		if len(skladniki) == 5:
-			del_item()
-					
+			del_item()				
 			$Slot24.create("mixdogolabkow")
-			print("yo")
-			skladniki.clear()
-	elif "mixdogolabkow" and "sol" in skladniki:
+		skladniki.clear()
+	elif "mixdogolabkow" and "sol" and "ryz" in skladniki:
+		if len(skladniki) == 3:
+			del_item()				
+			$Slot24.create("mixwszystkiego")
+		skladniki.clear()
+	#elif "przecierpomidorowy" and "sol" and "bulion" in skladniki:
+	#	if len(skladniki) == 3:
+	#		del_item()
+	#		$Slot24.create("mixdogolabkow")
+	elif "mixdogolabkow" and "lisc" in skladniki:
 		if len(skladniki) == 2:
 			del_item()
-					
-			$Slot24.create("mixdogolabkow")
-			print("yo")
-			skladniki.clear()
-	elif "przecierpomidorowy" and "sol" and "bulion" in skladniki:
-		if len(skladniki) == 3:
-			del_item()
-			$Slot24.create("mixdogolabkow")
-			print("yo")
-			skladniki.clear()
+			$Slot24.create("golabkinieupieczone")
+		skladniki.clear()
 	else:
 		skladniki.clear()
 	#if len(skladniki) == 2:

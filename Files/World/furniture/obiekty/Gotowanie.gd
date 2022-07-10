@@ -7,20 +7,27 @@ var licznik = 0
 
 var item = null
 
-func _physics_process(_delta):
+
+		
+func _process(delta):
 	if item == null:
-		if object.get_child_count():
-			for item_child in object.get_children():
+		if kapusta.get_child_count():
+			for item_child in kapusta.get_children():
 				if item_child.item_name == "kapusta":
-					item = "kapusta"
-					
+					item = "kapusta"	
+				else:
+					item = null
 		else:
-			item = null
-				
+					item = null
+	if item == "kapusta":
+		object.create("lisc")
+			
 var object
+var kapusta
 
 func _ready():
 	object = get_node("Slot24")
+	kapusta = get_node("Slot25")
 	#$Slot25.create("garnek1")
 	
 #func _on_Button_pressed():

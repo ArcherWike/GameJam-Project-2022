@@ -29,20 +29,6 @@ margin_right = -52.0
 margin_bottom = 20.0
 rect_scale = Vector2( 3, 3 )
 
-[node name="dol" type="ColorRect" parent="Node2D/turnPiekarnik"]
-margin_left = -3.0
-margin_top = 61.0
-margin_right = 116.0
-margin_bottom = 75.0
-color = Color( 0.992157, 0.584314, 0.192157, 0.156863 )
-
-[node name="gora" type="ColorRect" parent="Node2D/turnPiekarnik"]
-margin_left = -1.66666
-margin_top = 45.6667
-margin_right = 117.333
-margin_bottom = 59.6667
-color = Color( 0.992157, 0.584314, 0.192157, 0.156863 )
-
 [node name="temp" type="Label" parent="Node2D"]
 modulate = Color( 0, 0, 0, 1 )
 margin_left = -13.0
@@ -55,7 +41,6 @@ custom_fonts/font = SubResource( 1 )
 text = "temp: 0"
 
 [node name="Timer" type="Timer" parent="Node2D"]
-wait_time = 0.2
 
 [node name="Slot24" parent="." instance=ExtResource( 2 )]
 modulate = Color( 0.52549, 0.454902, 0.509804, 0.921569 )

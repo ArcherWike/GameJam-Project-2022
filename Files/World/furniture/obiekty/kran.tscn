@@ -21,11 +21,12 @@ position = Vector2( 602, 371 )
 texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 374.0
-margin_top = 52.0
-margin_right = 523.0
-margin_bottom = 111.0
-text = "wlacz kran"
+modulate = Color( 1, 1, 1, 0.67451 )
+margin_left = 510.0
+margin_top = 164.0
+margin_right = 587.0
+margin_bottom = 223.0
+text = "Turn on"
 
 [node name="Slot24" parent="." instance=ExtResource( 1 )]
 margin_left = 411.0
