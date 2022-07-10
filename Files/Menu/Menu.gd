@@ -22,6 +22,7 @@ func _physics_process(_delta):
 			#$AnimationPlayer.stop("menu_mjuzika")
 			print(Music.is_playing()) 
 func _ready():
+	self.hide()
 	Music.stop()
 	Music.set_current_animation("muzyka_gamePlay")	
 	Music.play("muzyka_gamePlay")

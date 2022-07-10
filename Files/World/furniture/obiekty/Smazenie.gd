@@ -31,9 +31,9 @@ func _ready():
 
 func _on_Timer_timeout():
 	print(time)
-	if time < 3 && item == "cebulka_pokrojona":
+	if time < 20 && item == "cebulka_pokrojona":
 		time += 1
-	elif time == 3 && item == "cebulka_pokrojona":
+	elif time == 20 && item == "cebulka_pokrojona":
 		print("usmazono")
 		object.create("cebulka złocistapokrojona")
 		$Node2D/Timer.stop()
