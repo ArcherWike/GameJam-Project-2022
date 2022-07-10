@@ -1,5 +1,6 @@
 extends Control
 
+signal krojenie
 
 const Slot = preload("res://World/furniture/Slot/Slot.gd")
 
@@ -42,4 +43,6 @@ func krojenie():
 	if skladnik_roboczy.get_child_count():
 		for item_child in skladnik_roboczy.get_children():
 			if item_child.item_name == "cebula1":
+				emit_signal("krojenie")
 				skladnik_roboczy.create("cebulka_pokrojona")
+				

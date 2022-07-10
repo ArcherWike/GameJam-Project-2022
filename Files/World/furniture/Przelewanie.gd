@@ -1,6 +1,7 @@
 extends Control
 
 var object
+signal do
 
 func _ready():
 	object = get_node("Slot24")
@@ -15,5 +16,6 @@ func _on_Button_pressed():
 
 
 func _process(delta):
+	emit_signal("do")
 	$Slot1.create("szklanka")
 		#var i = ran

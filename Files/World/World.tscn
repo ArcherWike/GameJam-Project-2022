@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=73 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/World.gd" type="Script" id=2]
@@ -46,6 +46,12 @@
 [ext_resource path="res://World/Item/cebula1.png" type="Texture" id=44]
 [ext_resource path="res://World/furniture/obiekty/PiekarnikZapalony.png" type="Texture" id=45]
 [ext_resource path="res://World/furniture/swiatlo_piekarnik.gd" type="Script" id=46]
+[ext_resource path="res://Audio/kitchen/Chopping2.wav" type="AudioStream" id=47]
+[ext_resource path="res://Audio/sceny/dzwieki.gd" type="Script" id=48]
+[ext_resource path="res://Audio/kitchen/OvenTimerDing.wav" type="AudioStream" id=49]
+[ext_resource path="res://World/Item/golabkiupieczone.png" type="Texture" id=50]
+[ext_resource path="res://Font/Babyque.ttf" type="DynamicFontData" id=51]
+[ext_resource path="res://World/END.gd" type="Script" id=52]
 
 [sub_resource type="TileSet" id=9]
 0/name = "podloga.png 0"
@@ -373,6 +379,62 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 )
 }
 
+[sub_resource type="Animation" id=17]
+resource_name = "krojenie"
+length = 2.0
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Node/krojenie")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 47 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "usmazenie"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Node/zrobienie")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 49 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "zrobiony"
+tracks/0/type = "audio"
+tracks/0/path = NodePath("Node/zrobienie")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 49 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="DynamicFont" id=20]
+size = 50
+font_data = ExtResource( 51 )
+
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -651,7 +713,7 @@ margin_right = -1259.85
 margin_bottom = -108.2
 item1 = "szklanka"
 item2 = "ryz"
-item3 = "ryz"
+item3 = "bulka_tarta"
 
 [node name="kran" parent="Fridge" instance=ExtResource( 3 )]
 visible = false
@@ -729,6 +791,59 @@ anims/RESET = SubResource( 6 )
 anims/m_menu = SubResource( 8 )
 anims/muzyka_gamePlay = SubResource( 7 )
 
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 48 )
+
+[node name="sound" type="AnimationPlayer" parent="Node"]
+root_node = NodePath("../..")
+anims/krojenie = SubResource( 17 )
+anims/usmazenie = SubResource( 19 )
+anims/zrobiony = SubResource( 18 )
+
+[node name="krojenie" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 47 )
+
+[node name="zrobienie" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource( 49 )
+
+[node name="END" type="Panel" parent="."]
+visible = false
+margin_left = 275.0
+margin_top = 166.0
+margin_right = 561.0
+margin_bottom = 510.0
+script = ExtResource( 52 )
+
+[node name="Label" type="Label" parent="END"]
+margin_left = 55.0
+margin_top = 33.0
+margin_right = 201.0
+margin_bottom = 79.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = SubResource( 20 )
+text = "You win!"
+
+[node name="Sprite" type="Sprite" parent="END"]
+position = Vector2( 134, 149 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 50 )
+
+[node name="Button" type="Button" parent="END"]
+margin_left = 15.0
+margin_top = 256.0
+margin_right = 265.0
+margin_bottom = 331.0
+rect_min_size = Vector2( 250, 75 )
+
+[node name="Label2" type="Label" parent="END/Button"]
+margin_left = 51.0
+margin_top = 14.0
+margin_right = 208.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 150, 50 )
+custom_fonts/font = SubResource( 20 )
+text = "new game"
+
 [connection signal="obiekt" from="YSort/mebelCollision" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision3" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision4" to="." method="_on_mebelCollision_obiekt"]
@@ -742,4 +857,8 @@ anims/muzyka_gamePlay = SubResource( 7 )
 [connection signal="obiekt" from="YSort/mebelCollision12" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision8" to="." method="_on_mebelCollision_obiekt"]
 [connection signal="obiekt" from="YSort/mebelCollision9" to="." method="_on_mebelCollision_obiekt"]
+[connection signal="krojenie" from="Fridge/siekanie" to="Node" method="_on_siekanie_krojenie"]
+[connection signal="do" from="Fridge/miska" to="Node" method="_on_miska_do"]
+[connection signal="enD" from="Fridge/piekarnik" to="END" method="_on_piekarnik_enD"]
 [connection signal="pieczenie" from="Fridge/piekarnik" to="Obiekty/kuchenki/piekarnik" method="_on_piekarnik_pieczenie"]
+[connection signal="pressed" from="END/Button" to="END" method="_on_Button_pressed"]

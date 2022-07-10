@@ -13,4 +13,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	$minutnik.rect_rotation +=1 
+	$wskazowka.rotation_degrees +=1 

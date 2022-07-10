@@ -1,6 +1,7 @@
 extends Control
 
-
+signal do
+signal enD
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -71,8 +72,10 @@ func _on_Timer_timeout():
 	if !wloczony && temp > 0:
 		temp -= 1
 	$Node2D/temp.text = str("temp: ",temp)
-	if temp >= 200 && wloczony && item == "golabkinieupieczone":
+	if temp >= 180 && wloczony && item == "golabkinieupieczone":
+		emit_signal("do")
 		object.create("golabkiupieczone")
+		emit_signal("enD")
 		$Node2D/Timer.stop()
 		
 	
