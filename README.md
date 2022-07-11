@@ -1,4 +1,6 @@
 # GameJam-Project
+link: https://gamejolt.com/games/familydinner/732483
+
 Game "Family Dinner"
 Made during: United With Ukraine GameJam 2022
 
@@ -6,7 +8,6 @@ Our game is playable among families, kids or teens, its playstyle can be defined
 
 Cooking Guide: https://docs.google.com/document/d/1svwlMWuL0463PpuvvCxFdhaSAnRV3adi-7sZGR4Rtis/edit?usp=sharing
 
-https://gamejolt.com/games/familydinner/732483
 
 ![](https://github.com/ArcherWike/GameJam-Project-2022/blob/main/Files/background2.png)
 
