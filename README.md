@@ -8,6 +8,8 @@ Our game is playable among families, kids or teens, its playstyle can be defined
 
 **Cooking Guide:** `https://docs.google.com/document/d/1svwlMWuL0463PpuvvCxFdhaSAnRV3adi-7sZGR4Rtis/edit?usp=sharing`
 
+[![Cooking Guide](https://docs.google.com/Family-Dinner/Cooking Guide/)](https://docs.google.com/document/d/1svwlMWuL0463PpuvvCxFdhaSAnRV3adi-7sZGR4Rtis/edit?usp=sharing)
+
 
 ![](https://github.com/ArcherWike/GameJam-Project-2022/blob/main/Files/background2.png)
 
