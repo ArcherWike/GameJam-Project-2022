@@ -1,6 +1,6 @@
-#Game "Family Dinner"
-# GameJam-Project
-##Made during: United With Ukraine GameJam 2022
+# Game "Family Dinner"
+## GameJam-Project
+## Made during: United With Ukraine GameJam 2022
 
 Our game is playable among families, kids or teens, its playstyle can be defined by the players themselves. The only goal that never changes is finishing one of the dishes on time, with a perfect score. How they will do it only depends on the teamwork between them and their communication skills.
 
